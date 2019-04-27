@@ -27,26 +27,34 @@
         .fa:hover {
             opacity: 0.7;
         }
+
+        .w3-red, .w3-hover-red:hover {
+            background-color: #194478 !important;
+            color: #f8f2b1 !important;
+        }
+        .w3-text-red, .w3-hover-text-red:hover {
+            color: #194478!important;
+        }
     </style>
 <body>
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-    <div class="w3-container">
-        <h3 class="w3-padding-64"><b>Signature<br>Auto Glass</b></h3>
-    </div>
-    <div class="w3-bar-block">
-        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-        <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a> 
-        <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fleet Management</a> 
-        <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a> 
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
-    </div>
-        <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
-        <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Signature<br>Auto Glass</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+            <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a> 
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+            <a href="#fleet" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Fleet Management</a> 
+            <a href="#freequote" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a> 
+            <a href="#warranty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
+            <a href="#referral" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
+        </div>
+            <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
+            <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
     </nav>
 
     <!-- Top menu on small screens -->
@@ -63,9 +71,9 @@
 
     <!-- Header -->
     <div class="w3-container" style="margin-top:80px" id="showcase">
-        <h1 class="w3-jumbo"><b>Signature Auto Glass</b></h1>
-        <h1 class="w3-xxxlarge w3-text-red"><b>Using cutting edge technology with old school practicality to deliver the safest and highest quality auto glass installation</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <img src="../images/logo.jpg" style="max-height: 100px; max-width: 100%; display: block; margin-left: auto; margin-right: auto" onclick="onClick(this)" alt="Concrete meets bricks">
+        <h4 style="text-align: center; color: #194478;">Using cutting edge technology with old school practicality to deliver the safest and highest quality auto glass installation</h4>
+        <hr style="width:50px;border:5px solid #f8ee7f; display: block; margin-left: auto; margin-right: auto" class="w3-round">
     </div>
     
     <!-- Photo grid (modal) (Homepage) -->
@@ -95,11 +103,11 @@
     <!-- About Us -->
     <div class="w3-container" id="aboutus" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>About Us</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
 
-        <p>Mission:</p>
+        <p><b>Mission:</b></p>
         <p>Our mission is to establish Signature Auto Glass as the premier leaders in the auto glass replacement and repair industry, by delivering exceptional customer service, exceeding safety standards and maintaining fair pricing.</p>
-        <p>What We Do:</p>
+        <p><b>What We Do:</b></p>
         <p>Signature Auto Glass uses cutting edge technology with old school practicality to deliver the safest and highest quality auto glass installation and repair.
             We have a team of local Auto Glass Installers ready to take care of your auto glass replacement needs. Your needs are our priority!
             At Signature Auto Glass, we are committed to providing excellent customer service and quality auto glass replacement. Your safety is top priority with our experienced team of auto glass technicians, we want to keep you and your vehicle safe and on the road. Signature Auto Glass will gladly service your import, domestic or high performance exotic car. We take pride in our work, offering excellent customer service and using high quality Auto Glass, Moulding and Urethane. 
@@ -112,23 +120,24 @@
     <!-- Services -->
     <div class="w3-container" id="services" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
 
-        <ul>
+        <ul><b>
             <li>Windshield Repair</li>
             <li>Backglass</li>
             <li>Vent Glass</li>
             <li>Door Glass</li>
             <li>Quarter Glass</li>
             <li>Side Glass</li>
+            </b>
         </ul>
 
     </div>
     
     <!-- Fleet Management -->
-    <div class="w3-container" id="designers" style="margin-top:75px">
+    <div class="w3-container" id="fleet" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Fleet Management</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
         <p>The best team in the world.</p>
         <p> 
             We have a team of local Auto Glass Installers ready to take care of your auto glass replacement needs.  
@@ -141,10 +150,12 @@
 
     <!-- Free Quote -->
     <!-- Put the form in this area -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
+    <div class="w3-container" id="freequote" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Free Quote</b></h1>
+
         <hr style="width:50px;border:5px solid red" class="w3-round">
         <p>Do you want us to give you a Quote!!!</p>
+
         <form action="/action_page.php" target="_blank">
         <div class="w3-section">
             <label>Year</label>
@@ -268,39 +279,47 @@
     </div>
 
     <!-- Warranty -->
-    <div class="w3-container" id="services" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Warranty</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>We are a w that focus on what's best for your home and what's best for you!</p>
+    <div class="w3-container" id="warranty" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Warranty and Disclaimer</b></h1>
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
+        <p><b>Windshield Repair:</b></p>
+        <p style="color: red"><b>
+            Due to the process of using pressure and vacuum cycles to repair laminated glass and the unstable properties of broken glass, 
+            the damaged area may develop additional cracks or existing cracks may increase in length.
+            </b>
+        </p>
+        <p>This problem is very rare and occurs in less than .1% of all windshield repairs performed using the Windshield Repair System.</p>
+        <p>Appearance AFTER the Repair (Not a cosmetic fix)</p>
         <p>
-            We have a team of local Auto Glass Installers ready to take care of your auto glass replacement needs.  
+            It’s important to understand that a successful repair DOES NOT mean the rock chip repair will become invisible or improve significantly in appearance.
+            The process for windshield rock chip repair is primarily a structural repair. The cosmetic appearance AFTER the repair is not a reflection of whether or not the repair was successful.
+            With that being said, the repaired chip may also disappear almost completely.
+        </p>
+        <p><b>Auto Glass Warranty:</b></p>
+        <p>
+            Signature Auto Glass offers a Lifetime Warranty against leaks (air or water) and workmanship as long as the initial customer owns the vehicle. The warranty is non-transferable.
+            Power and Manual sliding back glasses are warranted for 6 months from date of installation.
+            Please call <b>(404) 850-1072 </b>as soon as any leaks or defects are noticed. Customers must present the original receipt for warranty work.
 
-            Your needs are our priority! At Signature Auto Glass, we are committed to providing excellent customer service and quality auto glass replacement and other areas nearby. 
-            Your safety is top priority with our experienced team of auto glass technicians, we want to keep you and your vehicle safe and on the road. 
-            Signature Auto Glass will gladly service your import, domestic or high performance exotic car. 
-            We take pride in our work, offering excellent customer service and using high quality Auto Glass, Moulding and Urethane.
-            Regardless of whether your need is as a result of something that flew into your windshield as you drove down the road or because you were the victim of a crime, Signature Auto glass is here to help. 
-            If necessary, we are also able to work with your insurance provider to properly file your insurance claim. As an added convenience for our customers,
-            we offer Free MOBILE SERVICE in Atlanta and nearby areas We bring our Auto Glass Shop to you! Signature Auto Glass will gladly come to you!  
-            When you call our office (404) 850-1072, our phone representatives will ask you for the essential information in order to be able to provide you with a free quote and answer your questions.
+        <p><b>Warranty Limitations:</b></p>
+        <p>
+            The warranty only covers workmanship and leaks. Signature Auto Glass will not be held liable for damages that occur as a result of previous damages, rust, rock chips, vandalism, theft, accidents or natural occurrences.
+            Warranty will not be honored if repairs or replacement are conducted without prior authorization from Signature Auto Glass.
+            If damages occur to the vehicle as a result of auto glass replacement, Signature Auto Glass reserves the right to select a vendor to repair the damages.
+            Signature Auto Glass is not responsible for regulator or motor issues that occur as a result of broken door glass.
+            Signature Auto Glass does not re calibrate vehicles with lane departure warning system/forward collision.
         </p>
     </div>
     
     <!-- Referral Program -->
-    <div class="w3-container" id="services" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Referral Program</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-        <p>
-            We have a team of local Auto Glass Installers ready to take care of your auto glass replacement needs.  
-            Your needs are our priority! At Signature Auto Glass, we are committed to providing excellent customer service and quality auto glass replacement and other areas nearby. 
-            Your safety is top priority with our experienced team of auto glass technicians, we want to keep you and your vehicle safe and on the road. 
-            Signature Auto Glass will gladly service your import, domestic or high performance exotic car. 
-            We take pride in our work, offering excellent customer service and using high quality Auto Glass, Moulding and Urethane.
-            Regardless of whether your need is as a result of something that flew into your windshield as you drove down the road or because you were the victim of a crime, Signature Auto glass is here to help. 
-            If necessary, we are also able to work with your insurance provider to properly file your insurance claim. As an added convenience for our customers,
-            we offer Free MOBILE SERVICE in Atlanta and nearby areas We bring our Auto Glass Shop to you! Signature Auto Glass will gladly come to you!  
-            When you call our office (404) 850-1072, our phone representatives will ask you for the essential information in order to be able to provide you with a free quote and answer your questions.
+    <div class="w3-container" id="referral" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Auto Glass Ambassador Referral Program</b></h1>
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
+        <p>Refer potential Auto Glass customers with your Auto Glass Ambassador Code (use your resources: Social Media, Craigslist, Nextdoor, Friends, Family etc be creative with integrity All post must be approved before posting</p>
+        <p>If the customer receives auto glass service from Signature Auto Glass</p>
+        <p><b>You will receive $5.00 for each customer that receives service Money will be sent via cash app PayPal or Venmo (to collect $600.00 or more must have a w9 on file)</b></p>
+                
+        <p>There are an estimated 3.5 million vehicles on the road in Atlanta many of them have or will have broken auto glass that will need replacement or repair. Spread the word and get paid today!</p>
 
         </p>
     </div>
