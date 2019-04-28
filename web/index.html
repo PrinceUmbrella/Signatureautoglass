@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <title>Signature Auto Glass</title>
+    <link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,7 +11,7 @@
     <style>
         body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
         body {font-size:16px;}
-        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+        .w3-half img{margin-bottom:-6px;margin-top:16px;}
         .w3-half img:hover{opacity:1}
 
         /* For the social media icons */
@@ -35,6 +36,15 @@
         .w3-text-red, .w3-hover-text-red:hover {
             color: #194478!important;
         }
+        .w4-input{
+            padding: 8px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            height: 90px;
+        }
+
     </style>
 <body>
 
@@ -71,24 +81,14 @@
 
     <!-- Header -->
     <div class="w3-container" style="margin-top:80px" id="showcase">
-        <img src="../images/logo.jpg" style="max-height: 100px; max-width: 100%; display: block; margin-left: auto; margin-right: auto" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="../images/logo.jpg" style="max-height: 100px; max-width: 100%; display: block; margin-left: auto; margin-right: auto">
         <h4 style="text-align: center; color: #194478;">Using cutting edge technology with old school practicality to deliver the safest and highest quality auto glass installation</h4>
         <hr style="width:50px;border:5px solid #f8ee7f; display: block; margin-left: auto; margin-right: auto" class="w3-round">
     </div>
     
     <!-- Photo grid (modal) (Homepage) -->
     <div class="w3-row-padding">
-        <div class="w3-half">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
-        </div>
-
-        <div class="w3-half">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
-        </div>
+            <img src="../images/image11.png" style="width:100%">
     </div>
 
     <!-- Modal for full size images on click-->
@@ -119,7 +119,7 @@
 
     <!-- Services -->
     <div class="w3-container" id="services" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Services</b></h1>
         <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
 
         <ul><b>
@@ -131,7 +131,13 @@
             <li>Side Glass</li>
             </b>
         </ul>
+    </div>
+    <div class="w3-half">
+        <img src="../images/image13.png" style="width:100%; padding: 8px;">
+    </div>
 
+    <div class="w3-half">
+        <img src="../images/image12.png" style="width:100%; padding: 8px;">
     </div>
     
     <!-- Fleet Management -->
@@ -153,8 +159,8 @@
     <div class="w3-container" id="freequote" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Free Quote</b></h1>
 
-        <hr style="width:50px;border:5px solid #f8ee7f"" class="w3-round">
-        <p>Do you want us to give you a Quote!!!</p>
+        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
+        <p>Please, fill out this form for a free quote:</p>
 
         <form action="/action_page.php" target="_blank">
         <div class="w3-section">
@@ -186,6 +192,8 @@
             <input class="w3-input w3-border" type="text" name="Address" required>
         </div>
         <div class="w3-section">
+
+
             <label>Phone</label>
             <input class="w3-input w3-border" type="text" name="Phone" required>
         </div>
@@ -310,7 +318,7 @@
             Signature Auto Glass does not re calibrate vehicles with lane departure warning system/forward collision.
         </p>
     </div>
-    
+    <img src="../images/image14.png" style="width:100%; padding: 8px;">
     <!-- Referral Program -->
     <div class="w3-container" id="referral" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Auto Glass Ambassador Referral Program</b></h1>
