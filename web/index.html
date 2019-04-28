@@ -30,8 +30,8 @@
         }
 
         .w3-red, .w3-hover-red:hover {
-            background-color: #194478!important;
-            color: #f8f2b1!important;
+            background-color: #194478 !important;
+            color: #f8f2b1 !important;
         }
         .w3-text-red, .w3-hover-text-red:hover {
             color: #194478!important;
@@ -158,17 +158,11 @@
     <!-- Put the form in this area -->
     <div class="w3-container" id="freequote" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Free Quote</b></h1>
+
         <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
         <p>Please, fill out this form for a free quote:</p>
+
         <form action="/action_page.php" target="_blank">
-        <div class="w3-section">
-            <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="Name" required>
-        </div>
-        <div class="w3-section">
-            <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="Email" required>
-        </div>
         <div class="w3-section">
             <label>Year</label>
             <input class="w3-input w3-border" type="text" name="Year" required>
@@ -181,56 +175,114 @@
             <label>Model</label>
             <input class="w3-input w3-border" type="text" name="Model" required>
         </div>
-        <div class="w3-section">
+            <div class="w3-section">
             <label>Style</label>
             <input class="w3-input w3-border" type="text" name="Style" required>
         </div>
         <div class="w3-section">
-            <label>VIN</label>
-            <input class="w3-input w3-border" type="text" name="VIN">
+            <label>Vin</label>
+            <input class="w3-input w3-border" type="text" name="Vin" required>
         </div>
         <div class="w3-section">
-            <label>Phone Number</label>
-            <input class="w3-input w3-border" type="text" name="Phone" required>
+            <label>Name</label>
+            <input class="w3-input w3-border" type="text" name="Name" required>
         </div>
         <div class="w3-section">
             <label>Address</label>
-            <input class="w3-input w3-border" type="text" name="Address">
-         </div>
-         <div class="w3-section">
-            <label>Please Select The Damaged Glass: </label><br><br>
-            <select name="Damage">
-                <option value="Windshield">Windshield</option>
-                <option value="Back Glass">Back Glass</option>
-                <option value="Side Glass Left Front">Side Glass - Left Front</option>
-                <option value="Side Glass Right Front">Side Glass - Right Front</option>
-                <option value="Side Glass Left Rear">Side Glass - Left Rear</option>
-                <option value="Side Glass Right Rear">Side Glass - Right Rear</option>
-                <option value="Door Glass - Left Front">Door Glass - Left Front</option>
-                <option value="Door Glass - Right Front">Door Glass - Right Front</option>
-                <option value="Door Glass - Left Rear">Door Glass - Left Rear</option>
-                <option value="Door Glass - Right Rear">Door Glass - Right Rear</option>
-                <option value="Vent Glass - Left Front">Vent Glass - Left Front</option>
-                <option value="Vent Glass - Right Front">Vent Glass - Right Front</option>
-                <option value="Vent Glass - Left Rear">Vent Glass - Left Rear</option>
-                <option value="Vent Glass - Right Rear">Vent Glass - Right Rear</option>
-                <option value="Quarter Glass - Left Front">Quarter Glass - Left Front</option>
-                <option value="Quarter Glass - Right Front">Quarter Glass - Right Front</option>
-                <option value="Quarter Glass - Left Rear">Quarter Glass - Left Rear</option>
-                <option value="Quarter Glass - Right Rear">Quarter Glass - Right Rear</option>
-            </select>
+            <input class="w3-input w3-border" type="text" name="Address" required>
         </div>
         <div class="w3-section">
-            <label>Please Select Payment Method: </label><br><br>
-            <input type="checkbox" name="selfPay" value="selfPay"> Self Pay<br>
-            <input type="checkbox" name="insurance" value="insurance"> Insurance<br>
+
+
+            <label>Phone</label>
+            <input class="w3-input w3-border" type="text" name="Phone" required>
         </div>
         <div class="w3-section">
-            <label>Please Enter Details About The Damage: </label><br>
-            <input class="w4-input w3-border" type="text" name="details" required>            
-        </div>
-        
-            <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" name="Email" required>
+        </div> 
+        <div class="w3-section">
+            <label class="w3-input" >Please select the damaged glass</label>
+        </div> 
+        <div class="w3-section">
+            <label>Windshield Repair</label>
+            <select class="w3-input w3-border" iid = "repair">
+                <option value="hide">-- Repair --</option>
+                <option value="six">6 Inches</option>
+                <option value="threeOrLess">3 or less Inches</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>How Many Chips Selection</label>
+            <select class="w3-input w3-border" iid = "Chips">
+                <option value="hide">-- Selection --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select> 
+        </div> 
+
+        <div class="w3-section">
+            <label class="w3-input">Replacement</label>
+        </div> 
+        <div class="w3-section">
+            <label>Back Glass</label>
+            <select class="w3-input w3-border" id = "Back_Glass">
+                <option value="hide">-- Back Glass --</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Side Glass</label>
+            <select class="w3-input w3-border" id = "Side_Glass">
+                <option value="hide">-- Side Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Door Glass</label>
+            <select class="w3-input w3-border" id = "Door_Glass">
+                <option value="hide">-- Door Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Vent Glass</label>
+            <select class="w3-input w3-border" id = "Vent_Glass">
+                <option value="hide">-- Vent Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section" >
+            <label>Quarter Glass</label>
+            <select class="w3-input w3-border" id = "Quarter_Glass">
+                <option value="hide">-- Quarter Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section" >
+            <label>Payment Method</label>
+            <select class="w3-input w3-border" id = "Payment">
+                <option value="hide">-- Payment --</option>
+                <option value="left">Self Pay</option>
+                <option value="right">Insurance</option>
+            </select> 
+        </div> 
+    
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
         </form>  
     </div>
 
@@ -255,7 +307,7 @@
         <p>
             Signature Auto Glass offers a Lifetime Warranty against leaks (air or water) and workmanship as long as the initial customer owns the vehicle. The warranty is non-transferable.
             Power and Manual sliding back glasses are warranted for 6 months from date of installation.
-            Please call (404) 850-1072 as soon as any leaks or defects are noticed. Customers must present the original receipt for warranty work.
+            Please call <b>(404) 850-1072 </b>as soon as any leaks or defects are noticed. Customers must present the original receipt for warranty work.
 
         <p><b>Warranty Limitations:</b></p>
         <p>
@@ -273,7 +325,7 @@
         <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
         <p>Refer potential Auto Glass customers with your Auto Glass Ambassador Code (use your resources: Social Media, Craigslist, Nextdoor, Friends, Family etc be creative with integrity All post must be approved before posting</p>
         <p>If the customer receives auto glass service from Signature Auto Glass</p>
-        <p>You will receive $5.00 for each customer that receives service Money will be sent via cash app PayPal or Venmo (to collect $600.00 or more must have a w9 on file)</p>
+        <p><b>You will receive $5.00 for each customer that receives service Money will be sent via cash app PayPal or Venmo (to collect $600.00 or more must have a w9 on file)</b></p>
                 
         <p>There are an estimated 3.5 million vehicles on the road in Atlanta many of them have or will have broken auto glass that will need replacement or repair. Spread the word and get paid today!</p>
 
