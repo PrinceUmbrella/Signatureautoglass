@@ -152,21 +152,128 @@
     <!-- Put the form in this area -->
     <div class="w3-container" id="freequote" style="margin-top:75px">
         <h1 class="w3-xxxlarge w3-text-red"><b>Free Quote</b></h1>
-        <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
-        <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+
+        <hr style="width:50px;border:5px solid #f8ee7f"" class="w3-round">
+        <p>Do you want us to give you a Quote!!!</p>
+
         <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+            <label>Year</label>
+            <input class="w3-input w3-border" type="text" name="Year" required>
+        </div>
+        <div class="w3-section">
+            <label>Make</label>
+            <input class="w3-input w3-border" type="text" name="Make" required>
+        </div>
+        <div class="w3-section">
+            <label>Model</label>
+            <input class="w3-input w3-border" type="text" name="Model" required>
+        </div>
+            <div class="w3-section">
+            <label>Style</label>
+            <input class="w3-input w3-border" type="text" name="Style" required>
+        </div>
+        <div class="w3-section">
+            <label>Vin</label>
+            <input class="w3-input w3-border" type="text" name="Vin" required>
+        </div>
         <div class="w3-section">
             <label>Name</label>
             <input class="w3-input w3-border" type="text" name="Name" required>
         </div>
         <div class="w3-section">
-            <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="Email" required>
+            <label>Address</label>
+            <input class="w3-input w3-border" type="text" name="Address" required>
         </div>
         <div class="w3-section">
-            <label>Message</label>
-            <input class="w3-input w3-border" type="text" name="Message" required>
+            <label>Phone</label>
+            <input class="w3-input w3-border" type="text" name="Phone" required>
         </div>
+        <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="email" name="Email" required>
+        </div> 
+        <div class="w3-section">
+            <label class="w3-input" >Please select the damaged glass</label>
+        </div> 
+        <div class="w3-section">
+            <label>Windshield Repair</label>
+            <select class="w3-input w3-border" iid = "repair">
+                <option value="hide">-- Repair --</option>
+                <option value="six">6 Inches</option>
+                <option value="threeOrLess">3 or less Inches</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>How Many Chips Selection</label>
+            <select class="w3-input w3-border" iid = "Chips">
+                <option value="hide">-- Selection --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select> 
+        </div> 
+
+        <div class="w3-section">
+            <label class="w3-input">Replacement</label>
+        </div> 
+        <div class="w3-section">
+            <label>Back Glass</label>
+            <select class="w3-input w3-border" id = "Back_Glass">
+                <option value="hide">-- Back Glass --</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Side Glass</label>
+            <select class="w3-input w3-border" id = "Side_Glass">
+                <option value="hide">-- Side Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Door Glass</label>
+            <select class="w3-input w3-border" id = "Door_Glass">
+                <option value="hide">-- Door Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section">
+            <label>Vent Glass</label>
+            <select class="w3-input w3-border" id = "Vent_Glass">
+                <option value="hide">-- Vent Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section" >
+            <label>Quarter Glass</label>
+            <select class="w3-input w3-border" id = "Quarter_Glass">
+                <option value="hide">-- Quarter Glass --</option>
+                <option value="left">Left Front</option>
+                <option value="right">Right Front</option>
+                <option value="rearright">Rear Right</option>
+                <option value="rearleft">Rear</option>
+            </select> 
+        </div> 
+        <div class="w3-section" >
+            <label>Payment Method</label>
+            <select class="w3-input w3-border" id = "Payment">
+                <option value="hide">-- Payment --</option>
+                <option value="left">Self Pay</option>
+                <option value="right">Insurance</option>
+            </select> 
+        </div> 
+    
         <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
         </form>  
     </div>
