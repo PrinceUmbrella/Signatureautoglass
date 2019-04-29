@@ -78,15 +78,15 @@
     <!-- Photo grid (modal) (Homepage) -->
     <div class="w3-row-padding">
         <div class="w3-half">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="../images/image12.png" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
         </div>
 
         <div class="w3-half">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-        <img src="../images/logo.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+        <img src="../images/image14.png" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
         </div>
     </div>
 
