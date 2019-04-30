@@ -84,7 +84,7 @@
         <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
         <p>Do you want us to give you a Quote!!!</p>
 
-        <form action="/action_page.php" target="_blank">
+        <form action="quote.php" method= "POST">
         <div class="w3-section">
             <label>Year</label>
             <input class="w3-input w3-border" type="text" name="Year" required>
@@ -106,8 +106,12 @@
             <input class="w3-input w3-border" type="text" name="Vin" required>
         </div>
         <div class="w3-section">
-            <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="Name" required>
+            <label>First Name</label>
+            <input class="w3-input w3-border" type="text" name="First_Name" required>
+        </div>
+        <div class="w3-section">
+            <label>Last Name</label>
+            <input class="w3-input w3-border" type="text" name="Last_Name" required>
         </div>
         <div class="w3-section">
             <label>Address</label>
@@ -122,11 +126,15 @@
             <input class="w3-input w3-border" type="email" name="Email" required>
         </div>
         <div class="w3-section">
+            <label>Password to keep track of your quote status</label>
+            <input class="w3-input w3-border" type="password" name="Password" required>
+        </div>
+        <div class="w3-section">
             <label class="w3-input" >Please select the damaged glass</label>
         </div>
         <div class="w3-section">
             <label>Windshield Repair</label>
-            <select class="w3-input w3-border" iid = "repair">
+            <select class="w3-input w3-border" name = "repair">
                 <option value="hide">-- Repair --</option>
                 <option value="six">6 Inches</option>
                 <option value="threeOrLess">3 or less Inches</option>
@@ -134,7 +142,7 @@
         </div>
         <div class="w3-section">
             <label>How Many Chips Selection</label>
-            <select class="w3-input w3-border" iid = "Chips">
+            <select class="w3-input w3-border" name = "chips">
                 <option value="hide">-- Selection --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -147,7 +155,7 @@
         </div>
         <div class="w3-section">
             <label>Back Glass</label>
-            <select class="w3-input w3-border" id = "Back_Glass">
+            <select class="w3-input w3-border" name = "Back_Glass">
                 <option value="hide">-- Back Glass --</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
@@ -155,7 +163,7 @@
         </div>
         <div class="w3-section">
             <label>Side Glass</label>
-            <select class="w3-input w3-border" id = "Side_Glass">
+            <select class="w3-input w3-border"name = "Side_Glass">
                 <option value="hide">-- Side Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
@@ -165,7 +173,7 @@
         </div>
         <div class="w3-section">
             <label>Door Glass</label>
-            <select class="w3-input w3-border" id = "Door_Glass">
+            <select class="w3-input w3-border" name = "Door_Glass">
                 <option value="hide">-- Door Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
@@ -175,7 +183,7 @@
         </div>
         <div class="w3-section">
             <label>Vent Glass</label>
-            <select class="w3-input w3-border" id = "Vent_Glass">
+            <select class="w3-input w3-border" name = "Vent_Glass">
                 <option value="hide">-- Vent Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
@@ -185,7 +193,7 @@
         </div>
         <div class="w3-section" >
             <label>Quarter Glass</label>
-            <select class="w3-input w3-border" id = "Quarter_Glass">
+            <select class="w3-input w3-border" name = "Quarter_Glass">
                 <option value="hide">-- Quarter Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
@@ -195,10 +203,10 @@
         </div>
         <div class="w3-section" >
             <label>Payment Method</label>
-            <select class="w3-input w3-border" id = "Payment">
-                <option value="hide">-- Payment --</option>
-                <option value="left">Self Pay</option>
-                <option value="right">Insurance</option>
+            <select class="w3-input w3-border" name = "Payment">
+                <option value="no_Payment">-- Payment --</option>
+                <option value="Self_Pay">Self Pay</option>
+                <option value="Insurance">Insurance</option>
             </select>
         </div>
 
