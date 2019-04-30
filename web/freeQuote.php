@@ -52,6 +52,7 @@
             <a href="freeQuote.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a>
             <a href="index.php#warranty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
             <a href="index.php#referral" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
+            <a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LogIn</a>
         </div>
             <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
             <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
@@ -84,7 +85,7 @@
         <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
         <p>Do you want us to give you a Quote!!!</p>
 
-        <form action="quote.php" method= "POST">
+        <form target="_blank" action="quote.php" method= "POST">
         <div class="w3-section">
             <label>Year</label>
             <input class="w3-input w3-border" type="text" name="Year" required>
@@ -135,7 +136,7 @@
         <div class="w3-section">
             <label>Windshield Repair</label>
             <select class="w3-input w3-border" name = "repair">
-                <option value="hide">-- Repair --</option>
+                <option value="none">-- Repair --</option>
                 <option value="six">6 Inches</option>
                 <option value="threeOrLess">3 or less Inches</option>
             </select>
@@ -143,7 +144,7 @@
         <div class="w3-section">
             <label>How Many Chips Selection</label>
             <select class="w3-input w3-border" name = "chips">
-                <option value="hide">-- Selection --</option>
+                <option value="none">-- Selection --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -156,7 +157,7 @@
         <div class="w3-section">
             <label>Back Glass</label>
             <select class="w3-input w3-border" name = "Back_Glass">
-                <option value="hide">-- Back Glass --</option>
+                <option value="none">-- Back Glass --</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
@@ -164,7 +165,7 @@
         <div class="w3-section">
             <label>Side Glass</label>
             <select class="w3-input w3-border"name = "Side_Glass">
-                <option value="hide">-- Side Glass --</option>
+                <option value="none">-- Side Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
                 <option value="rearright">Rear Right</option>
@@ -174,7 +175,7 @@
         <div class="w3-section">
             <label>Door Glass</label>
             <select class="w3-input w3-border" name = "Door_Glass">
-                <option value="hide">-- Door Glass --</option>
+                <option value="none">-- Door Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
                 <option value="rearright">Rear Right</option>
@@ -184,7 +185,7 @@
         <div class="w3-section">
             <label>Vent Glass</label>
             <select class="w3-input w3-border" name = "Vent_Glass">
-                <option value="hide">-- Vent Glass --</option>
+                <option value="none">-- Vent Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
                 <option value="rearright">Rear Right</option>
@@ -194,7 +195,7 @@
         <div class="w3-section" >
             <label>Quarter Glass</label>
             <select class="w3-input w3-border" name = "Quarter_Glass">
-                <option value="hide">-- Quarter Glass --</option>
+                <option value="none">-- Quarter Glass --</option>
                 <option value="left">Left Front</option>
                 <option value="right">Right Front</option>
                 <option value="rearright">Rear Right</option>
@@ -210,7 +211,7 @@
             </select>
         </div>
 
-        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+        <button onclick="freeQuote.php" type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
         </form>
     </div>
 

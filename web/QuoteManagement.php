@@ -53,10 +53,12 @@
                 <a href="freeQuote.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a>
                 <a href="index.php#warranty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
                 <a href="index.php#referral" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
+                <a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LogIn</a>
             </div>
                 <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
                 <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
         </nav>
+
         <!-- Top menu on small screens -->
         <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
         <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
@@ -95,29 +97,37 @@
                     }
                     $query = ("SELECT *
                                 FROM quote
-                                    NATURAL JOIN customer;");
+                                	NATURAL JOIN customer
+                                		NATURAL JOIN car_damage;");
                     $result = $db->query($query);
                     $num_results = $result->num_rows;
                     if ($num_results > 0) {
                     $i = 0;
                     while ($row = $result-> fetch_assoc() ) {
                         echo "<tr class = 'w3-light-grey w3-hover-red' onClick = 'Hide(".$i.")'><td>". $row["Quote_ID"]. "</td><td>". $row["First_Name"]." ".$row["Last_Name"] ."</td><td>". $row["Make"]. "</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Email:</b> ".$row["Email"]."</td><td> <b>Phone Number:</b> ".$row["Phone_Number"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Model:</b> ".$row["Model"]."</td><td> Year: ".$row["Year"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Style:</b> ".$row["Style"]."</td><td> Vin".$row["Vin_Number"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Email:</b> ".$row["Email"]."</td><td> <b> Phone Number:</b> ".$row["Phone_Number"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Model:</b> ".$row["Model"]."</td><td> <b> Year: </b> ".$row["Year"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Style:</b> ".$row["Style"]."</td><td> <b> Vin: </b>".$row["Vin_Number"]."</td></tr>";
                         echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
-                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Repair:</b> ".$row["Repair"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Chip:</b> ".$row["Chip"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Back_Glass:</b> ".$row["Back_glass"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Side_Glass:</b> ".$row["Side_glass"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Door_Glass:</b> ".$row["Door_glass"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Vent_Glass:</b> ".$row["Vent_glass"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Quarter_Glass:</b> ".$row["Quarter_glass"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Payment:</b> ".$row["Payment"]."</td></tr>";
                         $i++;
-                        echo "</br>";
                         }
                         echo "</table>";
                     }
                     $db->close();
                     ?>
             </div>
+          </br>
+          </br>
+          </br>
+          </br>
         </div>
         <script>
             function Hide(i) {
@@ -132,6 +142,27 @@
               }
             }
             }
+            </script>
+            <script>
+                // Script to open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
+
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+
+                // Modal Image Gallery
+                function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+            </script>
         </script>
     </body>
 </html>

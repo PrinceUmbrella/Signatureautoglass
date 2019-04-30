@@ -44,6 +44,7 @@
             <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-none"><h3 class="w3-padding-64"><b>Signature<br>Auto Glass</b></h3></a>
         </div>
         <div class="w3-bar-block">
+
             <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
             <a href="index.php#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
             <a href="services.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
@@ -51,6 +52,7 @@
             <a href="freeQuote.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a>
             <a href="index.php#warranty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
             <a href="index.php#referral" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
+            <a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LogIn</a>
         </div>
             <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
             <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
@@ -78,15 +80,15 @@
     <!-- Photo grid (modal) (Homepage) -->
     <div class="w3-row-padding">
         <div class="w3-half">
-        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-        <img src="../images/image12.png" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Front">
+        <img src="../images/image12.png" style="width:100%" onclick="onClick(this)" alt="Side">
+        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="Front">
         </div>
 
         <div class="w3-half">
-        <img src="../images/image14.png" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+        <img src="../images/image14.png" style="width:100%" onclick="onClick(this)" alt="Windows">
+        <img src="../images/image13.png" style="width:100%" onclick="onClick(this)" alt="Mirrors">
+        <img src="../images/image11.png" style="width:100%" onclick="onClick(this)" alt="Front">
         </div>
     </div>
 

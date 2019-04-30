@@ -52,6 +52,7 @@
             <a href="freeQuote.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Free Quote</a>
             <a href="index.php#warranty" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Warranty</a>
             <a href="index.php#referral" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Referral Program</a>
+            <a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">LogIn</a>
         </div>
             <a href="https://www.facebook.com/SignatureAG/?ref=br_rs" class="fa fa-facebook" target="_blank"></a>
             <a href="https://www.instagram.com/signatureautoglassga/" class="fa fa-instagram" target="_blank"></a>
@@ -89,7 +90,44 @@
             Signature Auto Glass will gladly service your import, domestic or high performance exotic car.
         <p><b>Our designers are thoughtfully chosen</b>:</p>
     </div>
-    
+    <div class="w3-container" id="Fmanagement" style="margin-top:2px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Car Status.</b></h1>
+        <hr style="width:50px;border:5px solid #f8ee7f; padding: none;" class="w3-round">
+        <div class="box">
+            <table class="w3-table-all" style="margin-top:-30px;">
+                <tr class = "w3-light-grey w3-hover-red">
+                <th> Car_ID </th>
+                <th> Name </th>
+                <th> Status</th>
+                </tr>
+
+                <?php
+                session_start();
+                @ $db = new mysqli('localhost', 'root', '314159265', 'autoglass');
+
+                if (mysqli_connect_error()){
+                die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+                }
+                $query = ("SELECT * FROM fleets
+                          JOIN customer
+                          ON Customer_ID =". $_SESSION['Customer_ID'].";");
+                $result = $db->query($query);
+                $num_results = $result->num_rows;
+                if ($num_results > 0) {
+                  while ($row = $result-> fetch_assoc() )
+                  {
+                        echo "<tr class = 'w3-light-grey w3-hover-red' ><td>". $row["Fleet_ID"]. "</td><td>". $row["First_Name"]." ".$row["Last_Name"] ."</td><td>". $row["Status"]. "</td></tr>";
+                        echo "</br>";
+                        echo "</br>";
+                        echo "</br>";
+                        echo "</br>";
+                  }
+                  echo "</table>";
+                  }
+                $db->close();
+                ?>
+        </div>
+    </div>
     <!-- End page content -->
     </div>
     <script>

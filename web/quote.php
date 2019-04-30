@@ -61,19 +61,34 @@ else{
   $sql = "SELECT Max(Customer_ID) FROM autoglass.customer;";
   $results = $db->query($sql);
   $row = $results->fetch_assoc();
-  $ID = $row["Max(Customer_ID)"];
+  $Custom_ID = $row["Max(Customer_ID)"];
   $newsql = "Insert Into autoglass.quote (Customer_ID, Make, Model,Year, Style, Vin_Number, Payment)
-  VALUES ($ID,'$Make', '$Model' ,'$Year', '$Style', '$Vin', '$Payment');";
+  VALUES ($Custom_ID,'$Make', '$Model' ,'$Year', '$Style', '$Vin', '$Payment');";
   $db->query($newsql);
-  $newsql = "Insert Into autoglass.fleets (Customer_ID, Status)
-  VALUES ($ID, 'In Progress')";
+
+  $newsql = "Insert Into autoglass.fleets(Contact_Person, Status)
+  VALUES ($Custom_ID, 'In Progress')";
   $db->query($newsql);
-  
-  if($db->query($newsql)){
-    echo"New records is inserted succesfully";
+
+  $sql = "SELECT Max(Quote_ID) FROM autoglass.quote;";
+  $results = $db->query($sql);
+  $row = $results->fetch_assoc();
+  $Quote_ID = $row["Max(Quote_ID)"];
+
+  $sql = "SELECT Max(Fleet_ID) FROM autoglass.fleets;";
+  $results = $db->query($sql);
+  $row = $results->fetch_assoc();
+  $Car_ID = $row["Max(Fleet_ID)"];
+
+  $sql = "Insert Into autoglass.car_damage (Car_ID, Repair, Chips, Back_glass, Side_glass, Door_glass, Vent_glass, Quarter_glass, Quote_form_ID)
+          Values ($Car_ID, '$repair' , '$chips' , '$Back_Glass','$Side_Glass', '$Door_Glass', '$Vent_Glass', '$Quarter_Glass', $Quote_ID);";
+  if($db->query($sql)){
+    header("Location: freeQuote.php");
   }
   else{
     echo "Error: ". $sql ."<br>" . $db->error;
   }
+
 }
+$db->close();
 ?>
