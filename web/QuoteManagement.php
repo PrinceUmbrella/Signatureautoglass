@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="css/toggleDetails.css">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -74,18 +75,63 @@
             <h4 style="text-align: center; color: #194478;">Using cutting edge technology with old school practicality to deliver the safest and highest quality auto glass installation</h4>
             <hr style="width:50px;border:5px solid #f8ee7f; display: block; margin-left: auto; margin-right: auto" class="w3-round">
         </div>
-        <div class="w3-container" id="services" style="margin-top:15px">
-            <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+        <div class="w3-container" id="Qmanagement" style="margin-top:15px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Quote Submitted.</b></h1>
             <hr style="width:50px;border:5px solid #f8ee7f" class="w3-round">
-            <ul><b>
-                <li>Windshield Repair</li>
-                <li>Backglass</li>
-                <li>Vent Glass</li>
-                <li>Door Glass</li>
-                <li>Quarter Glass</li>
-                <li>Side Glass</li>
-                </b>
-            </ul>
+            <div class="box">
+                <table class="w3-table-all" style="margin-top:-30px;">
+                    <tr class = "w3-light-grey w3-hover-red">
+                    <th> Quote_ID </th>
+                    <th> Name </th>
+                    <th> Make</th>
+                    </tr>
+
+                    <?php
+                    session_start();
+                    @ $db = new mysqli('localhost', 'root', '314159265', 'autoglass');
+
+                    if (mysqli_connect_error()){
+                    die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+                    }
+                    $query = ("SELECT *
+                                FROM quote
+                                    NATURAL JOIN customer;");
+                    $result = $db->query($query);
+                    $num_results = $result->num_rows;
+                    if ($num_results > 0) {
+                    $i = 0;
+                    while ($row = $result-> fetch_assoc() ) {
+                        echo "<tr class = 'w3-light-grey w3-hover-red' onClick = 'Hide(".$i.")'><td>". $row["Quote_ID"]. "</td><td>". $row["First_Name"]." ".$row["Last_Name"] ."</td><td>". $row["Make"]. "</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Email:</b> ".$row["Email"]."</td><td> <b>Phone Number:</b> ".$row["Phone_Number"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Model:</b> ".$row["Model"]."</td><td> Year: ".$row["Year"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Style:</b> ".$row["Style"]."</td><td> Vin".$row["Vin_Number"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        echo "<tr style = 'display:none;' class = 'w3-light-grey w3-hover-red  w3-card-4 detail".$i."'><td> <b>Address:</b> ".$row["Address"]."</td></tr>";
+                        $i++;
+                        echo "</br>";
+                        }
+                        echo "</table>";
+                    }
+                    $db->close();
+                    ?>
+            </div>
         </div>
+        <script>
+            function Hide(i) {
+            var y = "detail" + String(i);
+            var x = document.getElementsByClassName(y);
+            console.log(x);
+            for(var i = 0; i < x.length; i++){
+              if (x[i].style.display === "none") {
+                  x[i].style.display = "block";
+              } else {
+                  x[i].style.display = "none";
+              }
+            }
+            }
+        </script>
     </body>
 </html>
