@@ -97,8 +97,10 @@
                     }
                     $query = ("SELECT *
                                 FROM quote
-                                	NATURAL JOIN customer
-                                		NATURAL JOIN car_damage;");
+                                	JOIN customer
+                                		ON customer.Customer_ID = quote.Customer_ID
+                                  		JOIN car_damage
+                                  			ON car_damage.Quote_form_ID = quote.Quote_ID;");
                     $result = $db->query($query);
                     $num_results = $result->num_rows;
                     if ($num_results > 0) {
